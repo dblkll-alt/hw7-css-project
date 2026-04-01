@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #f7f7f7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #9fe3ff;
+}
+
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ececec;
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero::before {
+    content: "★";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #444;
+}
+
+.about {
+    padding: 60px 40px 30px;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px 60px;
+}
+
+.card {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #bbb;
+    background: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card:nth-child(2) {
+    background: #d8f4ff;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+    background: #111;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.footer p:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about {
+        padding: 40px 20px 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer {
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+}
